@@ -1,0 +1,64 @@
+/* Base Theme */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0A0F1F;
+  color: #E8ECF4;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: rgba(10, 15, 31, 0.9);
+  padding: 40px;
+  text-align: center;
+  border-bottom: 1px solid #1E2A47;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #4AA8FF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #79B8FF;
+}
+
+/* Buttons */
+.btn {
+  background: #0077FF;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005FCC;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  border-bottom: 1px solid #192542;
+}
+
+/* Glow Hover */
+.glow:hover {
+  text-shadow: 0 0 10px #00AFFF, 0 0 20px #00AFFF;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #67809A;
+}
