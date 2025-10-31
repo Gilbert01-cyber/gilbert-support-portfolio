@@ -1,64 +1,168 @@
-/* Base Theme */
+/* Global Styles */
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #0A0F1F;
-  color: #E8ECF4;
-  line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f19;
+    color: white;
 }
 
 /* Header */
 header {
-  background: rgba(10, 15, 31, 0.9);
-  padding: 40px;
-  text-align: center;
-  border-bottom: 1px solid #1E2A47;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
 }
 
-h1 {
-  font-size: 2.4rem;
-  color: #4AA8FF;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-h2 {
-  color: #79B8FF;
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-/* Buttons */
+nav a:hover {
+    color: #4ec9ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 span {
+    color: #4ec9ff;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s forwards;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+.delay-3 { animation-delay: 1.2s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn, .btn-outline {
+    padding: 12px 24px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 8px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
 .btn {
-  background: #0077FF;
-  padding: 12px 24px;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 16px;
-  transition: 0.3s;
+    background: #4ec9ff;
+    color: black;
 }
 
 .btn:hover {
-  background: #005FCC;
+    background: white;
+}
+
+.btn-outline {
+    color: #4ec9ff;
+    border: 1px solid #4ec9ff;
+}
+
+.btn-outline:hover {
+    background: #4ec9ff;
+    color: black;
 }
 
 /* Sections */
 section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  border-bottom: 1px solid #192542;
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Glow Hover */
-.glow:hover {
-  text-shadow: 0 0 10px #00AFFF, 0 0 20px #00AFFF;
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4ec9ff;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.skills-grid span {
+    background: #111727;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #232b3e;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    background: #111727;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #232b3e;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #4ec9ff;
+}
+
+/* Contact */
+#contact p {
+    text-align: center;
+    margin: 6px 0;
 }
 
 /* Footer */
 footer {
-  padding: 30px;
-  text-align: center;
-  color: #67809A;
+    text-align: center;
+    padding: 20px;
+    background: #05070f;
+    margin-top: 40px;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
